@@ -4,8 +4,8 @@ from telegram import Bot
 import os
 
 # 원혁님의 정보를 여기에 직접 입력하세요
-TOKEN = '원혁님의_텔레그램_봇_토큰'
-CHAT_ID = '원혁님의_텔레그램_채팅_ID'
+TOKEN = '8773453459:AAEj9ALMpp9noyNdLj0WUmpvG_QBtACDQGE'
+CHAT_ID = '1759062545'
 
 async def send_alert():
     try:
