@@ -1,0 +1,21 @@
+name: 1분 간격 환율 알림
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # 깃허브 무료 플랜은 최소 5분 주기를 권장합니다 (안정성)
+  workflow_dispatch: # 수동 실행 버튼
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 파이썬 설치
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: 라이브러리 설치
+        run: |
+          pip install yfinance python-telegram-bot
+      - name: 봇 실행
+        run: python bot.py
